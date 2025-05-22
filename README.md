@@ -3,7 +3,7 @@
 
 SnapOTP is a lightweight and customizable jQuery plugin to create elegant multi-field OTP (One-Time Password) input interfaces. It supports features like auto-focus, keyboard navigation, smart paste handling, reset control, and event callbacks — making it perfect for authentication and verification workflows.
 
-![SnapOTP Screenshot](./screenshot.png) <!-- Optional: Replace or remove if not available -->
+![SnapOTP Screenshot](./snapotp-jquery.png) <!-- Optional: Replace or remove if not available -->
 
 ---
 
