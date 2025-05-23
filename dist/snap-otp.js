@@ -42,7 +42,7 @@
       $inputs.on("input", function (e) {
         const $this = $(this);
         const value = $this.val();
-        const index = $inputs.index(this);       
+        const index = $inputs.index(this);
 
         if (value.length === 1 && index < settings.digits - 1) {
           $inputs.eq(index + 1).focus();
@@ -98,13 +98,30 @@
               .focus();
           }
         } else if (e.key === "ArrowLeft") {
-          if (index > 0) $inputs.eq(index - 1).focus();
+          if (index > 0) {
+            const prev = $inputs.eq(index - 1);
+            prev.focus();
+            setCursorToEnd(prev[0]);
+          }
         } else if (e.key === "ArrowRight") {
-          if (index < $inputs.length - 1) $inputs.eq(index + 1).focus();
+          if (index < $inputs.length - 1) {
+            const next = $inputs.eq(index + 1);
+            next.focus();
+            setCursorToEnd(next[0]);
+          }
         } else if (e.key === "Enter") {
           settings.onEnter(getValue());
         }
       });
+
+      function setCursorToEnd(input) {
+        setTimeout(() => {
+          const length = input.value.length;
+          if (settings?.type === "text") {
+            input.setSelectionRange(1, 1);
+          }
+        }, 10);
+      }
 
       function getValue() {
         return $inputs
@@ -136,5 +153,17 @@
     });
 
     return this;
+  };
+
+  $.fn.getValue = function () {
+    const $container = this;
+    const $inputs = $container.find(".snap-otp-input");
+
+    return $inputs
+      .map(function () {
+        return $(this).val();
+      })
+      .get()
+      .join("");
   };
 })(jQuery);

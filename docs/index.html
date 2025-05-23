@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Your Name" />
+    <meta
+      name="description"
+      content="SnapOTP jQuery is a lightweight OTP input field plugin for easy and customizable OTP entry."
+    />
+    <meta
+      name="keywords"
+      content="OTP input, jQuery plugin, snapotp, snapotp-jquery, one time password field, input UI"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="SnapOTP jQuery" />
+    <meta
+      property="og:description"
+      content="A jQuery plugin to create elegant and customizable OTP input fields."
+    />
+    <meta property="og:image" content="snapotp-jquery.png" />
+    <meta
+      property="og:url"
+      content="https://yourusername.github.io/snapotp-jquery"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SnapOTP jQuery" />
+    <meta
+      name="twitter:description"
+      content="Elegant jQuery OTP field plugin for quick and responsive one-time password input."
+    />
+    <meta name="twitter:image" content="snapotp-jquery.png" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SnapOTP jQuery",
+        "operatingSystem": "All",
+        "applicationCategory": "DeveloperTool",
+        "description": "SnapOTP jQuery is a lightweight OTP input field plugin for jQuery, ideal for implementing secure and user-friendly OTP entry fields.",
+        "url": "https://yourusername.github.io/snapotp-jquery/",
+        "image": "https://yourusername.github.io/snapotp-jquery/snapotp-jquery.png",
+        "creator": {
+          "@type": "Person",
+          "name": "Your Name"
+        }
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="snapotp-jquery.png" type="image/png" />
+
+    <!-- Title -->
+    <title>SnapOTP jQuery – Lightweight OTP Input Plugin</title>
+
+    <!-- Prism.js for Syntax Highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../dist/snap-otp.js"></script>
+    <link rel="stylesheet" href="../dist/snap-otp.css" />
+    <style>
+      .main-heading {
+        font-size: 2.5em;
+        color: #007bff;
+        margin-bottom: 40px;
+      }
+
+      h1,
+      h2 {
+        color: #0056b3;
+      }
+
+      footer {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #888;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.6;
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        background: #fff;
+      }
+
+      .highlight {
+        background: #f5f5f5;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+        overflow-x: auto;
+      }
+      .demo-container {
+        margin-bottom: 2rem;
+      }
+      code {
+        font-family: Consolas, monospace;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .otp-section {
+        margin-top: 3rem;
+      }
+
+      .mt-3 {
+        margin-top: 3rem;
+      }
+      .table-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main-heading">SnapOTP jQuery Plugin</h1>
+    <p>
+      <strong>SnapOTP jQuery</strong> is a lightweight and modern OTP input
+      field plugin that supports customizable styles and JavaScript callbacks.
+      It's ideal for login verification, signup, or 2FA processes.
+    </p>
+
+    <h2 class="mt-3">🧪 Live Demos</h2>
+
+    <div class="otp-section">
+      <h2>Box Style OTP</h2>
+      <div id="otp-boxed" class="otp-container"></div>
+      <pre><code class="language-js">
+$('#otp-boxed').snapOTP({
+  length: 6,
+  style: 'box',
+  onComplete: function(otp) {
+    console.log('OTP entered:', otp);
+  }
+});
+    </code></pre>
+    </div>
+
+    <div class="otp-section">
+      <h2>Circle Style OTP</h2>
+      <div id="otp-circular" class="otp-container"></div>
+      <pre><code class="language-js">
+$('#otp-circular').snapOTP({
+  length: 6,
+  style: 'circle',
+  onComplete: function(otp) {
+    console.log('OTP entered:', otp);
+  }
+});
+    </code></pre>
+    </div>
+
+    <div class="otp-section">
+      <h2>Underline Style OTP</h2>
+      <div id="otp-underlined" class="otp-container"></div>
+      <pre><code class="language-js">
+$('#otp-underlined').snapOTP({
+  length: 6,
+  style: 'underline',
+  onComplete: function(otp) {
+    console.log('OTP entered:', otp);
+  }
+});
+    </code></pre>
+    </div>
+
+    <div class="otp-section">
+      <h2>📘 How to Use SnapOTP</h2>
+      <p><strong>Include jQuery and the SnapOTP plugin:</strong></p>
+      <pre><code class="language-html">
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="dist/snap-otp.css" /&gt;
+&lt;script src="dist/snap-otp.js"&gt;&lt;/script&gt;
+  </code></pre>
+
+      <p class="mt-3"><strong>Basic Initialization:</strong></p>
+      <pre><code class="language-js">
+$('#otp-container').snapOTP({
+  digits: 6,
+  style: 'box',
+  type: 'text',
+  inputClass: 'my-input-class',
+  containerClass: 'my-container-class',
+  onComplete: function(code) {
+    console.log('Completed OTP:', code);
+  },
+  onChange: function(code) {
+    console.log('OTP changed:', code);
+  },
+  onEnter: function(code) {
+    console.log('Enter pressed. Current OTP:', code);
+  }
+});
+  </code></pre>
+
+    
+
+      <div class="otp-section" style="margin-left: 3rem">
+        <h3 class="mt-3"><strong>Available Styles:</strong></h3>
+        <ul>
+          <li><code>box</code> – Square box inputs (default)</li>
+          <li><code>circle</code> – Circular inputs</li>
+          <li><code>underline</code> – Underlined style inputs</li>
+        </ul>
+
+        <h3 class="mt-3"><strong>Keyboard Features:</strong></h3>
+        <ul>
+          <li>⏩ Auto focus to next input</li>
+          <li>⌫ Backspace to previous input</li>
+          <li>📋 Smart paste support</li>
+          <li>↔ Arrow navigation</li>
+          <li>⏎ Custom "Enter" key handler</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mt-3">📦 Installation</h2>
+    <div class="highlight">
+      <pre><code class="language-bash">npm install snapotp-jquery</code></pre>
+    </div>
+
+    <h2 class="mt-3">🔌 Basic Usage</h2>
+    <div class="highlight">
+      <pre><code class="language-html">&lt;div id="otp-boxed"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  $('#otp-boxed').snapOTP({
+    digits: 6,
+    style: 'box',
+    onComplete: function(otp) {
+      console.log('OTP entered:', otp);
+    }
+  });
+&lt;/script&gt;
+</code></pre>
+    </div>
+
+    <h2 class="mt-3">⚙️ Configuration Options</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>digits</code></td>
+            <td>Number</td>
+            <td>6</td>
+            <td>How many input boxes to show.</td>
+          </tr>
+          <tr>
+            <td><code>type</code></td>
+            <td>String</td>
+            <td>'text'</td>
+            <td>Input type. Options: 'text', 'number', 'tel', etc.</td>
+          </tr>
+          <tr>
+            <td><code>style</code></td>
+            <td>String</td>
+            <td>'box'</td>
+            <td>
+              Choose between <code>box</code>, <code>circle</code>, or
+              <code>underline</code> input styles.
+            </td>
+          </tr>
+          <tr>
+            <td><code>onComplete</code></td>
+            <td>Function</td>
+            <td>() => {}</td>
+            <td>Fires when all digits are entered.</td>
+          </tr>
+          <tr>
+            <td><code>onChange</code></td>
+            <td>Function</td>
+            <td>() => {}</td>
+            <td>Fires every time the input value changes.</td>
+          </tr>
+          <tr>
+            <td><code>onEnter</code></td>
+            <td>Function</td>
+            <td>() => {}</td>
+            <td>Fires when user presses <code>Enter</code> key.</td>
+          </tr>
+          <tr>
+            <td><code>inputClass</code></td>
+            <td>String</td>
+            <td>''</td>
+            <td>Custom class for each input field.</td>
+          </tr>
+          <tr>
+            <td><code>containerClass</code></td>
+            <td>String</td>
+            <td>''</td>
+            <td>Custom class for the container div.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#otp-boxed").snapOTP({
+          digits: 6,
+          style: "box",
+          onComplete: (otp) => console.log("Box OTP:", otp),
+        });
+
+        $("#otp-circular").snapOTP({
+          digits: 6,
+          style: "circle",
+          onComplete: (otp) => console.log("Circle OTP:", otp),
+        });
+
+        $("#otp-underlined").snapOTP({
+          digits: 6,
+          style: "underline",
+          onComplete: (otp) => console.log("Underline OTP:", otp),
+        });
+      });
+    </script>
+
+    <h2>🔄 Resetting the OTP</h2>
+    <p>To clear and reset the input fields, use the following:</p>
+    <div class="highlight">
+      <pre><code class="language-js">$('#otp-boxed').resetSnapOTP();</code></pre>
+    </div>
+
+    <h2>🔄 GET the Value</h2>
+    <p>To get value programmatically, use the following:</p>
+    <div class="highlight">
+      <pre><code class="language-js">let otp = $('#otp-boxed').getValue();</code></pre>
+    </div>
+
+    <h2>👨‍💻 Author</h2>
+    <p>
+      <strong> <a href="https://in.linkedin.com/in/nitinramrathod" target="_blank"> Nitin Ram Rathod </a></strong><br />
+      Full-stack JavaScript Developer<br />
+      Creator of SnapOTP<br />
+      Connect via GitHub or LinkedIn
+    </p>
+
+    <script>
+      $(document).ready(function () {
+        $("#otp-boxed").snapOTP({
+          length: 6,
+          style: "box",
+          onComplete: function (otp) {
+            console.log("OTP entered (boxed):", otp);
+          },
+        });
+
+        $("#otp-circular").snapOTP({
+          length: 6,
+          type: 'number',
+          style: "circle",
+          onComplete: function (otp) {
+            console.log("OTP entered (circular):", otp);
+          },
+        });
+
+        $("#otp-underlined").snapOTP({
+          length: 6,
+          style: "underline",
+          onComplete: function (otp) {
+            console.log("OTP entered (underlined):", otp);
+          },
+        });
+      });
+    </script>
+
+    <footer>
+      &copy; 2025
+      <a href="https://in.linkedin.com/in/nitinramrathod" target="_blank"
+        >Nitin Ram Rathod</a
+      >. Built with ❤️ using jQuery.
+    </footer>
+  </body>
+</html>
