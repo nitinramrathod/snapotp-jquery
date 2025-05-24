@@ -83,7 +83,8 @@ $('#otp').getValue();
 ```
 
 
-This will clear all fields and focus on the first input.
+This will get value of input and return it.
+
 ---
 
 ## 🎨 Styling
@@ -106,10 +107,9 @@ Customize styles in your CSS based on the `[data-style]` attribute.
 ## 📁 File Structure
 
 ```
-/snapotp-jquery
-│
-├── snapotp.js       # Plugin logic
-├── snapotp.css      # Default styles (extendable)
+📦 /dist/snapotp-jquery
+├── 📄 snapotp.js     – Core plugin logic (jQuery-based)
+└── 🎨 snapotp.css    – Default styling (easily customizable)
 ```
 
 ---
