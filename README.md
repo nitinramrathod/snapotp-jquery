@@ -70,11 +70,20 @@ $('#otp').snapOTP({
 ### Reset OTP inputs
 
 ```javascript
-document.getElementById('otp').resetSnapOTP();
+$('#otp').resetSnapOTP();
 ```
 
 This will clear all fields and focus on the first input.
 
+
+### Get Value
+
+```javascript
+$('#otp').getValue();
+```
+
+
+This will clear all fields and focus on the first input.
 ---
 
 ## 🎨 Styling
@@ -101,8 +110,6 @@ Customize styles in your CSS based on the `[data-style]` attribute.
 │
 ├── snapotp.js       # Plugin logic
 ├── snapotp.css      # Default styles (extendable)
-├── index.html       # Demo file (optional)
-└── README.md        # This file
 ```
 
 ---
