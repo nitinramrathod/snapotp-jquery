@@ -117,7 +117,10 @@ Customize styles in your CSS based on the `[data-style]` attribute.
 ## 👨‍🎨 Author
 
 **Nitin Rathod**  
-🔗 GitHub: [@nitinramrathod](https://github.com/nitinramrathod)
+🔗 GitHub: [@nitinramrathod](https://github.com/nitinramrathod)  
+📧 Email: rathod173ram@gmail.com  
+📱 Mobile: +91-8459556244  
+📍 Location: Thane, Maharashtra, India  
 
 ---
 
