@@ -34,6 +34,7 @@
 
 .snap-otp-input {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /* Circular Style  */
