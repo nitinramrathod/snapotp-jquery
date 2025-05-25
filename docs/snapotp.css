@@ -1,0 +1,58 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.snap-otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.snap-otp-input {
+  width: 40px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.snap-otp-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.snap-otp-input::-webkit-outer-spin-button,
+.snap-otp-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.snap-otp-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Circular Style  */
+.snap-otp-input[data-style="circle"]{
+  height: auto;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+/* Underlined Style  */
+.snap-otp-input[data-style="underline"]{
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+}
+.snap-otp-input[data-style="underline"]:focus{
+   border-color: #007bff;
+}
+

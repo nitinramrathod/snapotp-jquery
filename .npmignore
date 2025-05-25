@@ -1,5 +1,8 @@
+# Ignore everything
 *
+
+# Except dist folder and its content
 !dist/
-package.json
-README.md
-LICENSE
+!dist/**
+
+# No need to unignore package.json, README.md, or LICENSE — npm includes them by default

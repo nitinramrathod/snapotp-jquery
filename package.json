@@ -2,7 +2,7 @@
     "name": "snapotp-jquery",
     "version": "1.0.2",
     "description": "SnapOTP is a lightweight and customizable jQuery plugin to create elegant multi-input OTP fields with features like auto-focus, paste handling, keyboard navigation, and callbacks.",
-    "file": "dist/",
+    "files": ["dist"],
     "main": "dist/snap-otp.js",
     "style": "dist/snap-otp.css",
     "scripts": {
