@@ -1,12 +1,12 @@
 /*!
  * SnapOTP - Lightweight jQuery OTP Input Plugin
- * Version: 1.0.0
+ * Version: 1.0.3
  * Author: Nitin Rathod
- * Author URL: ""
- * Website: https://github.com/nitinramrathod/SnapOTP
+ * Author URL: "https://github.com/nitinramrathod"
+ * Website: https://nitinramrathod.github.io/snapotp-jquery
  * License: MIT
  * Description: A simple, customizable jQuery plugin to create elegant multi-input OTP fields with auto-focus, paste handling, keyboard navigation, and callbacks.
- * Repository: https://github.com/nitinramrathod/SnapOTP
+ * Repository: https://github.com/nitinramrathod/snapotp-jquery
  * Released: 2025-05-22
  */
 
